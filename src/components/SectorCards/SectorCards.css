@@ -1,0 +1,378 @@
+/* ─── Tokens ──────────────────────────────────────────────────────────────────
+   --accent must be set by your project. Default here matches a common red.
+──────────────────────────────────────────────────────────────────────────── */
+:root {
+  --accent: #c8102e;
+  --sc-bg: #ffffff;
+  --sc-surface: #f5f5f5;
+  --sc-border: rgba(0, 0, 0, 0.08);
+  --sc-text-primary: #1a1a1a;
+  --sc-text-secondary: #555555;
+  --sc-text-muted: #999999;
+  --sc-overlay-end: rgba(0, 0, 0, 0.70);
+  --sc-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --sc-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ─── Root ────────────────────────────────────────────────────────────────── */
+.sc-root {
+  background: var(--sc-bg);
+  color: var(--sc-text-primary);
+  font-family: var(--sc-font);
+  overflow-x: hidden;
+}
+
+.sc-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sc-text-center { text-align: center; }
+
+/* ─── Header ──────────────────────────────────────────────────────────────── */
+.sc-header-section {
+  padding: 60px 0 0px;
+}
+
+.sc-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--sc-text-secondary);
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
+}
+
+.sc-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  color: var(--sc-text-primary);
+}
+
+.sc-desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--sc-text-secondary);
+  /* max-width: 860px; */
+  margin: 0 auto;
+}
+
+/* ─── Swiper Section ──────────────────────────────────────────────────────── */
+.sc-swiper-section {
+  padding: 20px 0 0px;
+}
+
+.sc-swiper-outer-wrapper {
+  position: relative;
+  padding: 40px 0 0px;
+}
+
+/* ─── Swiper Slide ────────────────────────────────────────────────────────── */
+.sector-swiper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.sc-slide-wrapper {
+  width: 60%; /* This will be overridden by Swiper's slidesPerView auto if width is set here */
+  width: 600px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .sc-slide-wrapper {
+    width: 85%;
+    height: 350px;
+  }
+}
+
+.sc-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sc-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sc-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--sc-overlay-end) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.sc-card-label {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .sc-card-label {
+    font-size: 24px;
+  }
+}
+
+/* .sc-active-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 30px;
+  background-color: var(--accent);
+  color: #fff;
+  border: 3px solid #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: sc-badge-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+} */
+
+@keyframes sc-badge-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ─── Navigation ──────────────────────────────────────────────────────────── */
+.sc-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: var(--accent);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.sc-nav-prev { left: -10px; }
+.sc-nav-next { right: -10px; }
+
+.sc-nav-btn:hover {
+  background: #a30d26;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.sc-nav-btn.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+  .sc-nav-prev { left: 10px; }
+  .sc-nav-next { right: 10px; }
+}
+
+/* ─── Pagination ──────────────────────────────────────────────────────────── */
+.sc-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.sc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.1);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sc-dot.active {
+  width: 30px;
+  border-radius: 10px;
+  background: var(--accent);
+}
+
+/* ─── Product Panel ──────────────────────────────────────────────────────── */
+.sc-products-section {
+  padding: 40px 0 80px;
+  background: #fff;
+}
+
+.sc-product-panel {
+  border-top: 1px solid var(--sc-border);
+  padding-top: 40px;
+}
+
+.sc-subtab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.sc-subtab-btn {
+  background: #f8f9fa;
+  border: 1px solid var(--sc-border);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--sc-text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sc-subtab-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.sc-subtab-btn.active {
+  background: linear-gradient(135deg, #b3122f 0%, #E81C3D 50%, #ff5c77 100%);
+  color: #fff;
+  /* border-color: var(--accent); */
+}
+
+.sc-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.sc-part-card {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sc-part-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-color: #E81C3D;
+}
+
+.sc-part-img-wrap {
+  aspect-ratio: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-part-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sc-part-label {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--sc-border);
+}
+
+.sc-part-card:hover .sc-part-label{
+  color: #E81C3D;
+}
+
+.sc-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--sc-text-muted);
+  padding: 40px;
+}
+
+/* ─── Image Popup & Magnifier ────────────────────────────────────────────── */
+.sc-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  backdrop-filter: blur(8px);
+}
+
+.sc-popup-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.sc-close-btn {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.sc-close-btn:hover {
+  transform: rotate(90deg) scale(1.2);
+}
+
+.sc-magnifier-container {
+  position: relative;
+  display: inline-block;
+  cursor: crosshair;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.sc-popup-img {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.sc-magnifier-lens {
+  position: absolute;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  background-repeat: no-repeat;
+}

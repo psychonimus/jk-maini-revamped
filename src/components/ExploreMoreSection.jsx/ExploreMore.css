@@ -1,0 +1,123 @@
+
+.how-it-work-gold{
+	padding: 4rem 0;
+    background-color: #F6F5ED;
+}
+
+@media (max-width: 991px) {
+    .how-it-work-gold {
+        padding: 2rem 0;
+    }
+}
+
+.how-it-work-item-gold{
+	background: var(--secondary-color);
+    border-radius: 20px;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.how-work-item-header-gold{
+	position: relative;
+}
+
+.how-work-item-image-gold figure{
+    display: block;
+    border-radius: 20px;
+}
+
+.how-work-item-image-gold figure img{
+	width: 100%;
+    aspect-ratio: 1 / 0.653;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.how-work-item-no-gold{
+	position: relative;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #b3122f 0%, #E81C3D 50%, #ff5c77 100%);
+    border: 6px solid var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -50px 30px 0 auto;
+    transition: all 0.4s ease-in-out;
+	z-index: 1;
+}
+
+.how-work-item-no-gold h2{
+	font-size: 22px;
+	color: var(--white-color);
+    font-family: var(--primary-font);
+    margin-top: 8px;
+}
+
+.how-work-item-body-gold{
+	padding: 10px 30px 30px 30px;
+}
+
+.how-work-item-body-gold h3{
+	font-size: 25px;
+    font-family: var(--primary-font);
+    color: #E81C3D;
+}
+
+.how-work-item-body-gold p{
+	margin: 15px 0 0;
+    font-family: var(--secondary-font);
+}
+
+.how-work-item-body-gold ul{
+	list-style: none;
+    display: flex;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid var(--divider-color);
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+}
+
+.how-work-item-body-gold ul li{
+    font-size: 14px;
+	font-weight: 500;
+    color: #E81C3D;
+    line-height: normal;
+    background-color: var(--bg-color);
+    border-radius: 100px;
+    padding: 6px 16px;
+    transition: all 0.4s ease-in-out;
+}
+
+.how-work-item-body-gold ul li:hover{
+	background-color: #E81C3D;
+	color: var(--white-color);
+}
+
+.image-anime{
+    position: relative;
+    overflow: hidden;
+}
+
+.image-anime:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(255, 255, 255, .3);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
+}
+
+.image-anime:hover:after {
+    height: 250%;
+    transition: all 600ms linear;
+    background-color: transparent;
+}

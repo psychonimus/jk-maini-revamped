@@ -1,0 +1,173 @@
+
+.cta-box{
+	padding: 120px 0;
+    background-color: #F6F5ED;
+}
+
+.cta-box-item{
+	background-color: #F6F5ED;
+	border-radius: 20px;
+	padding: 40px;
+}
+
+
+.cta-item-contant-box{
+	margin-bottom: 40px;
+}
+
+.cta-item-contant-box h3{
+	font-size: 22px;
+}
+
+.cta-item-contant-box p{
+	margin: 20px 0 0;
+}
+
+.cta-box-item-image figure{
+	display: block;
+    mask-image: url('../images/cta-box-image-shape.svg');
+    background-image: url('../images/cta-box-image-shape.svg');
+    mask-size: cover;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.cta-box-item-image figure img{
+	width: 100%;
+	aspect-ratio: 1 / 0.601;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+.cta-box-counter-item{
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+}
+
+.cta-box-counter-no{
+	width: calc(37% - 5px);
+}
+
+.cta-box-counter-no h2{
+	font-size: 48px;
+}
+
+.cta-box-counter-contant{
+	width: calc(63% - 5px);
+}
+
+.cta-box-counter-contant p{
+	margin: 0;
+}
+
+.partner-world-map-box{
+	position: relative;
+}
+
+.partner-world-map-image figure{
+	display: block;
+	border-radius: 10px;
+}
+
+.partner-world-map-image img{
+	width: 100%;
+	aspect-ratio: 1 / 0.53;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.world-map-cards-box{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-70%);
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px 0;
+}
+
+.world-map-card-item{
+	position: relative;
+	width: 24%;
+	display: flex;
+	flex-wrap: wrap;
+    flex-direction: column;
+	align-content: center;
+	transition: all 0.5s ease-in-out;
+}
+
+.world-map-card-item.card-2{
+	top: 120px;
+}
+
+.world-map-card-item.card-4{
+	top: 180px;
+}
+
+.world-map-card-btn{
+	border: none;
+	background: transparent;
+	display: inline-block;
+    border-radius: 100px;
+    overflow: hidden;
+	padding: 0;
+	margin: 0 auto 25px;
+}
+
+.world-map-card-btn img{
+	width: 100%;
+	max-width: 60px;
+	border: 2px solid var(--white-color);
+	border-radius: 50%;
+}
+
+.world-map-card-content{
+	position: relative;
+	width: 160px;
+	text-align: center;
+	background: var(--white-color);
+	border-radius: 10px;
+	filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.05));
+	padding: 10px 15px;
+	opacity: 0;
+	margin: 0 auto;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: all 0.5s ease-in-out;
+	z-index: 1;
+}
+
+.world-map-card-item.active .world-map-card-content{
+	transform: scaleY(1);
+	opacity: 1;
+}
+
+.world-map-card-content::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -75%);
+	border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid var(--white-color);
+	width: 0;
+	height: 0;
+}
+
+.world-map-card-content h3{
+	font-size: 16px;
+}
+
+.world-map-card-content p{
+	font-size: 14px;
+	margin: 5px 0 0;
+}

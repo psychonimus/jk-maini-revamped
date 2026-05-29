@@ -1,0 +1,240 @@
+
+.main-footer{
+	padding: 80px 0 0;
+	margin-bottom: 2rem !important;
+    margin-inline: 2rem;
+    border-radius: 1rem;
+}
+.dark-section {
+    background-color: var(--primary-color);
+    background-image: url(./images/dark-section-bg-image.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    
+}
+
+.footer-header{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 20px;
+	border-bottom: 1px solid var(--dark-divider-color);
+	margin-bottom: 80px;
+	
+}
+
+.footer-logo img{
+	width: 100%;
+	max-width: 300px;
+    margin-top: -30px;
+}
+
+.footer-logo-info {
+    margin-top: 30px;
+}
+
+.footer-logo-info p {
+    color: var(--white-color);
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6em;
+    max-width: 350px;
+}
+
+.footer-logo-info p span {
+    color: var(--accent-secondary-color);
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.footer-logo-info p a {
+    color: inherit;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-logo-info p a:hover {
+    color: var(--accent-secondary-color);
+}
+
+.footer-contact-form{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 15px 30px;
+}
+
+.footer-contact-form h2{
+	font-size: 22px;
+	color: var(--white-color);
+}
+
+.footer-newsletter-form .form-group{
+	width: 350px;
+	display: flex;
+	flex-wrap: wrap;
+	background: var(--dark-divider-color);
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.footer-newsletter-form .form-group .form-control{
+	width: calc(100% - 46px);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5em;
+	color: var(--white-color);
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	box-shadow: none;
+	padding: 6px 14px;
+}
+
+.footer-newsletter-form .form-group .form-control::placeholder{
+	color: var(--white-color);
+}
+
+.footer-newsletter-form .form-group .newsletter-btn{
+	width: 46px;
+	height: 46px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--accent-color);
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-newsletter-form .form-group .newsletter-btn:hover{
+    background-color: var(--accent-secondary-color);
+}
+
+.footer-newsletter-form .form-group .newsletter-btn img{
+    width: 100%;
+	max-width: 24px;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-newsletter-form .form-group .newsletter-btn:hover img{
+	transform: rotate(45deg);
+}
+
+.footer-links-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-left: 3.125vw;
+}
+
+.footer-links{
+    max-width: 27%;
+}
+
+.footer-links h2{
+    font-size: 22px;
+    color: var(--white-color);
+    margin-bottom: 30px;
+}
+
+.footer-links ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footer-links ul li{
+	color: var(--white-color);
+	text-transform: capitalize;
+	line-height: 1.5em;
+	margin-bottom: 15px;
+}
+
+.footer-links ul li:last-child{
+	margin-bottom: 0;
+}
+
+.footer-links ul li a{
+	color: inherit;
+	transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover{
+	color: var(--accent-secondary-color);
+}
+
+.footer-contact-info-list{
+	max-width: 37%;
+}
+
+.footer-links.footer-contact-info-list ul li{
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	gap: 5px 15px;
+}
+
+.footer-links.footer-contact-info-list ul li img{
+	width: 100%;
+	max-width: 20px;
+}
+
+.footer-copyright{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+	border-top: 1px solid var(--dark-divider-color);
+	padding: 20px 0;
+	margin: 60px 0 0;
+}
+
+.footer-copyright-text p{
+	color: var(--white-color);
+	margin: 0;
+}
+
+.footer-social-links ul{
+	display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social-links ul li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-social-links ul li a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--dark-divider-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-social-links ul li:hover a{
+	background: var(--accent-secondary-color);
+}
+
+.footer-social-links ul li a i{
+    font-size: 18px;
+    color: inherit;
+}

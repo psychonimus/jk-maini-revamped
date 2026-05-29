@@ -1,0 +1,73 @@
+
+.cb-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: var(--accent-secondary-color);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+.cb-cursor.-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cb-cursor.-active {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    opacity: 0.5;
+}
+
+.cb-cursor.-pointer {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid var(--accent-secondary-color);
+}
+
+.cb-cursor.-text {
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cb-cursor-text {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cb-cursor.-text .cb-cursor-text {
+    opacity: 1;
+}
+
+.cb-cursor.-opaque {
+    background-color: var(--primary-color);
+    opacity: 1;
+}
+
+/* For larger pointer targets */
+.cb-cursor.-lg {
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 991px) {
+    .cb-cursor {
+        display: none !important;
+    }
+}
